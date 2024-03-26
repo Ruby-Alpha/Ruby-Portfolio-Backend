@@ -6,6 +6,7 @@ const skillsSchema= new Schema({
         required: true
     
     },
+    
     proficiencyLevel:{
         type: String,
         required: true

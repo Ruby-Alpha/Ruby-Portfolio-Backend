@@ -1,3 +1,4 @@
+import { ProjectModel } from "../model/projects.model";
 import { SkillsModel } from "../model/skills.model";
 
 export const  addSkills= async(req, res, next) =>{
@@ -21,8 +22,9 @@ export const getSkills = async (req, res, next) =>{
 
 export const getASkill = async (req,res, next) => {
     try {
-        
+        const getOneProject = await ProjectModel.findById(req.params.id);
+        res.json(getOneRecipe);
     } catch (error) {
-      next(error)  
+      next(error);  
     }
 }

@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/server/app.js",
-    "openapi" : "nodemon src/open-Api.js"
+    "openapi": "nodemon src/open-Api.js"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +18,8 @@
     "express": "^4.19.1",
     "express-oas-generator": "^1.0.46",
     "mongodb": "^6.5.0",
-    "mongoose": "^8.2.3"
+    "mongoose": "^8.2.3",
+    "mongoose-to-swagger": "^1.5.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
