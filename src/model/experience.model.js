@@ -13,8 +13,15 @@ const experienceSchema = new schema({
     },
     image: {
         type: String,
-        required: false
+       
     },
+    startdate:{
+        type:String
+    
+    },
+    enddate:{
+        type:String
+    }
 
 });
 export const ExperienceModel = mongoose.model('Experience', experienceSchema, 'experiences');

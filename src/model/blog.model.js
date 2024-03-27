@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 
 const schema = mongoose.Schema;
 const blogSchema = new schema({
-    name: {
+    title: {
         type: String,
         required: true
     },
@@ -14,6 +14,12 @@ const blogSchema = new schema({
     image: {
         type: String
     },
-
+    link: {
+        type:String,
+ 
+    },
+    author: {
+        type: String,
+    }
 });
 export const BlogModel = mongoose.model('Blog', blogSchema, 'blogs');

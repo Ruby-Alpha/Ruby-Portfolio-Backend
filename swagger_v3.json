@@ -1,20 +1,24 @@
 {
   "openapi": "3.0.0",
+  "info": {
+    "title": "ruby-portfolio-backend",
+    "version": "1.0.0",
+    "license": {
+      "name": "ISC"
+    },
+    "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3)."
+  },
   "paths": {
     "/skills": {
       "post": {
         "summary": "/skills",
         "responses": {},
-        "tags": [
-          "skills"
-        ]
+        "tags": []
       },
       "get": {
         "summary": "/skills",
         "responses": {},
-        "tags": [
-          "skills"
-        ]
+        "tags": []
       }
     },
     "/skills/{id}": {
@@ -31,39 +35,29 @@
           }
         ],
         "responses": {},
-        "tags": [
-          "skills"
-        ]
+        "tags": []
       }
     },
     "/blogs": {
       "post": {
         "summary": "/blogs",
         "responses": {},
-        "tags": [
-          "blogs"
-        ]
+        "tags": []
       },
       "get": {
         "summary": "/blogs",
         "responses": {},
-        "tags": [
-          "blogs"
-        ]
+        "tags": []
       },
       "patch": {
         "summary": "/blogs",
         "responses": {},
-        "tags": [
-          "blogs"
-        ]
+        "tags": []
       },
       "delete": {
         "summary": "/blogs",
         "responses": {},
-        "tags": [
-          "blogs"
-        ]
+        "tags": []
       }
     },
     "/blogs/{id}": {
@@ -80,9 +74,7 @@
           }
         ],
         "responses": {},
-        "tags": [
-          "blogs"
-        ]
+        "tags": []
       },
       "delete": {
         "summary": "/blogs/{id}",
@@ -97,39 +89,29 @@
           }
         ],
         "responses": {},
-        "tags": [
-          "blogs"
-        ]
+        "tags": []
       }
     },
     "/achievements": {
       "post": {
         "summary": "/achievements",
         "responses": {},
-        "tags": [
-          "achievements"
-        ]
+        "tags": []
       },
       "get": {
         "summary": "/achievements",
         "responses": {},
-        "tags": [
-          "achievements"
-        ]
+        "tags": []
       },
       "patch": {
         "summary": "/achievements",
         "responses": {},
-        "tags": [
-          "achievements"
-        ]
+        "tags": []
       },
       "delete": {
         "summary": "/achievements",
         "responses": {},
-        "tags": [
-          "achievements"
-        ]
+        "tags": []
       }
     },
     "/achievements/{id}": {
@@ -146,9 +128,7 @@
           }
         ],
         "responses": {},
-        "tags": [
-          "achievements"
-        ]
+        "tags": []
       },
       "delete": {
         "summary": "/achievements/{id}",
@@ -163,39 +143,62 @@
           }
         ],
         "responses": {},
-        "tags": [
-          "achievements"
-        ]
+        "tags": []
       }
     },
     "/experience": {
       "post": {
         "summary": "/experience",
-        "responses": {},
-        "tags": [
-          "experience"
-        ]
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string",
+                      "example": "My first website"
+                    },
+                    "description": {
+                      "type": "string",
+                      "example": "WWonderful experience"
+                    },
+                    "startdate": {
+                      "type": "string",
+                      "example": "2021"
+                    },
+                    "_id": {
+                      "type": "string",
+                      "example": "66047ba9911ca9fe8a4c0b72"
+                    },
+                    "__v": {
+                      "type": "number",
+                      "example": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": []
       },
       "get": {
         "summary": "/experience",
         "responses": {},
-        "tags": [
-          "experience"
-        ]
+        "tags": []
       },
       "patch": {
         "summary": "/experience",
         "responses": {},
-        "tags": [
-          "experience"
-        ]
+        "tags": []
       },
       "delete": {
         "summary": "/experience",
         "responses": {},
-        "tags": [
-          "experience"
-        ]
+        "tags": []
       }
     },
     "/experience/{id}": {
@@ -212,9 +215,7 @@
           }
         ],
         "responses": {},
-        "tags": [
-          "experience"
-        ]
+        "tags": []
       },
       "delete": {
         "summary": "/experience/{id}",
@@ -229,32 +230,24 @@
           }
         ],
         "responses": {},
-        "tags": [
-          "experience"
-        ]
+        "tags": []
       }
     },
     "/projects": {
       "post": {
         "summary": "/projects",
         "responses": {},
-        "tags": [
-          "projects"
-        ]
+        "tags": []
       },
       "get": {
         "summary": "/projects",
         "responses": {},
-        "tags": [
-          "projects"
-        ]
+        "tags": []
       },
       "delete": {
         "summary": "/projects",
         "responses": {},
-        "tags": [
-          "projects"
-        ]
+        "tags": []
       }
     },
     "/projects/{id}": {
@@ -271,9 +264,7 @@
           }
         ],
         "responses": {},
-        "tags": [
-          "projects"
-        ]
+        "tags": []
       },
       "patch": {
         "summary": "/projects/{id}",
@@ -287,39 +278,8 @@
             }
           }
         ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "_id": {
-                      "type": "string",
-                      "example": "660476a3951946c615e7bccd"
-                    },
-                    "title": {
-                      "type": "string",
-                      "example": "My first website"
-                    },
-                    "description": {
-                      "type": "string",
-                      "example": "WWonderful experience"
-                    },
-                    "__v": {
-                      "type": "number",
-                      "example": 0
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "tags": [
-          "projects"
-        ]
+        "responses": {},
+        "tags": []
       },
       "delete": {
         "summary": "/projects/{id}",
@@ -334,145 +294,9 @@
           }
         ],
         "responses": {},
-        "tags": [
-          "projects"
-        ]
+        "tags": []
       }
     }
   },
-  "tags": [
-    {
-      "name": "skills"
-    },
-    {
-      "name": "projects"
-    },
-    {
-      "name": "achievements"
-    },
-    {
-      "name": "blogs"
-    },
-    {
-      "name": "experience"
-    }
-  ],
-  "info": {
-    "title": "Portfolio API Documentation",
-    "description": "API Documentation for Portfolio website",
-    "version": ""
-  },
-  "servers": [
-    {
-      "url": "http://ruby-portfolio-backend.onrender.com"
-    },
-    {
-      "url": "https://ruby-portfolio-backend.onrender.com"
-    }
-  ],
-  "components": {
-    "schemas": {
-      "Blog": {
-        "title": "Blog",
-        "required": [
-          "name",
-          "description"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "image": {
-            "type": "string"
-          },
-          "_id": {
-            "type": "string"
-          }
-        }
-      },
-      "skill": {
-        "title": "skill",
-        "required": [
-          "name"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "proficiencyLevel": {
-            "type": "string"
-          },
-          "_id": {
-            "type": "string"
-          }
-        }
-      },
-      "Achievement": {
-        "title": "Achievement",
-        "required": [
-          "name",
-          "description"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "image": {
-            "type": "string"
-          },
-          "_id": {
-            "type": "string"
-          }
-        }
-      },
-      "Experience": {
-        "title": "Experience",
-        "required": [
-          "name",
-          "description"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "image": {
-            "type": "string"
-          },
-          "_id": {
-            "type": "string"
-          }
-        }
-      },
-      "Project": {
-        "title": "Project",
-        "required": [
-          "title",
-          "description"
-        ],
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "image": {
-            "type": "string"
-          },
-          "_id": {
-            "type": "string"
-          }
-        }
-      }
-    }
-  }
+  "tags": []
 }
