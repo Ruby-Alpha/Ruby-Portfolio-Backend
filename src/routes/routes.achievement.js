@@ -5,7 +5,7 @@ const router = Router();
 
 router.post ('/', addAchievement)
 router.get ('/', getAllAchievements)
-router.get ('/:id', getOneAchievement)
+//router.get ('/:id', getOneAchievement)
 router.patch ('/', updateAchievements)
 router.delete ('/', deleteAllAchievements)
 router.delete('/:id', deleteAnAchievement)

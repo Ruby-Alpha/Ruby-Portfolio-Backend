@@ -6,6 +6,7 @@ import ProjectRoutes from '../routes/routes.project.js';
 import ExperienceRoutes from '../routes/routes.experience.js';
 import BlogRoutes from '../routes/routes.blog.js';
 import SkillsRoutes from '../routes/routes.skills.js';
+import mongoose from 'mongoose';
 
 dotenv.config()
 
@@ -26,6 +27,10 @@ app.use(SkillsRoutes)
 
 
 const PORT = process.env.PORT;
+
+await mongoose.connect(process.env.MONGO_URI).then(() => {
+    console.log('database is connected')
+});
 
 
 

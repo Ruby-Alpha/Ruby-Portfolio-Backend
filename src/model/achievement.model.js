@@ -1,7 +1,9 @@
-import mongoose, { model } from "mongoose";
-import { Schema } from "mongoose";
+import mongoose from "mongoose";
 
-const achievementSchema = new Schema({
+
+const schema = mongoose.Schema;
+
+const achievementSchema = new schema({
     name: {
         type: String,
         required: true
@@ -16,4 +18,4 @@ const achievementSchema = new Schema({
     },
 
 });
-export const AchievementModel = model('Achievement', achievementSchema);
+export const AchievementModel = mongoose.model('Achievement', achievementSchema);

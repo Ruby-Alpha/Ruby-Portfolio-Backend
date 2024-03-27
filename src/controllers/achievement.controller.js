@@ -25,7 +25,7 @@ export const addAchievement = async(req, res, next) => {
     try {
         const Id = req.params.id
         
-        const getOneAchievement = await AchievementModel.findById(Id);
+        const getOneAchievement = await AchievementModel.findById(Id, req.body);
         res.json(getOneAchievement)
     } catch (error) {
         next(error)

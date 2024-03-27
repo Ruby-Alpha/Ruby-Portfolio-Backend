@@ -24,8 +24,8 @@ export const addExperience = async(req, res, next) => {
  }
  export const getOneExperience = async(req, res, next) => {
     try {
-        const getOneexperience = await ExperienceModel.findById(req.params.id);
-        res.json(getOneExperience)
+        const getAnExperience = await ExperienceModel.findById(req.params.id, req.body);
+        res.json(getAnExperience)
     } catch (error) {
         next(error)
     }
@@ -51,7 +51,7 @@ export const addExperience = async(req, res, next) => {
 
   export const deleteAnExperience = async (req, res, next) => {
    try {
-     const deleteAnAchievement = await ExperienceModel.findByIdAndDelete(req.params.id);
+     const deleteAnAchievement = await ExperienceModel.findByIdAndDelete(req.params.id, req.body);
      res.json(deleteAnExperience)
    } catch (error) {
     next(error)

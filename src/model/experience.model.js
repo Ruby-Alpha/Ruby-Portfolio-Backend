@@ -1,7 +1,8 @@
-import mongoose, { model } from "mongoose";
-import { Schema } from "mongoose";
+import mongoose from 'mongoose';
 
-const experienceSchema = new Schema({
+
+const schema = mongoose.Schema;
+const experienceSchema = new schema({
     name: {
         type: String,
         required: true
@@ -16,4 +17,4 @@ const experienceSchema = new Schema({
     },
 
 });
-export const ExperienceModel = model('Experience', experienceSchema, 'experiences');
+export const ExperienceModel = mongoose.model('Experience', experienceSchema, 'experiences');

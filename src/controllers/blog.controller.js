@@ -23,7 +23,7 @@ export const addBlog = async(req, res, next) => {
  }
  export const getOneBlog = async(req, res, next) => {
     try {
-        const getOneBlog = await BlogModel.findById(req.params.id);
+        const getOneBlog = await BlogModel.findById(req.params.id, req.body);
         res.json(getOneBlog)
     } catch (error) {
         next(error)
@@ -50,7 +50,7 @@ export const addBlog = async(req, res, next) => {
 
   export const deleteABlog = async (req, res, next) => {
    try {
-     const deleteABlog = await BlogModel.findByIdAndDelete(req.params.id);
+     const deleteABlog = await BlogModel.findByIdAndDelete(req.params.id, req.body);
      res.json(deleteABlog)
    } catch (error) {
     next(error)

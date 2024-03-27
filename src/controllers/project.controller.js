@@ -23,7 +23,7 @@ export const addProject = async(req, res, next) => {
  }
  export const getOneProject = async(req, res, next) => {
     try {
-        const getoneProject = await ProjectModel.findById(req.params.id);
+        const getoneProject = await ProjectModel.findById(req.params.id, req.body);
         res.json(getOneProject)
     } catch (error) {
         next(error)
@@ -50,7 +50,7 @@ export const addProject = async(req, res, next) => {
 
   export const deleteAProject = async (req, res, next) => {
    try {
-     const deleteOneProject = await ProjectModel.findByIdAndDelete(req.params.id);
+     const deleteOneProject = await ProjectModel.findByIdAndDelete(req.params.id, req.body);
      res.json(deleteOneProject)
    } catch (error) {
     next(error)

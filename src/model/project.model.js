@@ -1,12 +1,13 @@
-import { Schema } from "mongoose";
-import { model } from "mongoose";
+;
 
+import mongoose from "mongoose";
 
-const projectSchema = new Schema({
+const schema = mongoose.Schema;
+const projectSchema = new schema({
     title: {type:String, required: true},
     description: {type:String, required: true},
     image: {type:String, required:true },
     
 });
 
-export const ProjectModel= model ('Project', projectSchema, 'projects');
+export const ProjectModel= mongoose.model ('Project', projectSchema, 'projects');

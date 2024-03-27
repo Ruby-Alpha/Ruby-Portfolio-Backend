@@ -1,8 +1,8 @@
 
-import mongoose, { model } from "mongoose";
-import { Schema } from "mongoose";
+import mongoose from "mongoose";
 
-const blogSchema = new Schema({
+const schema = mongoose.Schema;
+const blogSchema = new schema({
     name: {
         type: String,
         required: true
@@ -17,4 +17,4 @@ const blogSchema = new Schema({
     },
 
 });
-export const BlogModel = model('Blog', blogSchema, 'blogs');
+export const BlogModel = mongoose.model('Blog', blogSchema, 'blogs');

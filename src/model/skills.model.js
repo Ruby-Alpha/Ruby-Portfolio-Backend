@@ -1,6 +1,8 @@
-import {Schema, model} from "mongoose";
 
-const skillsSchema= new Schema({
+import mongoose from "mongoose";
+
+const schema = mongoose.Schema;
+const skillsSchema= new schema({
     name : {
         type: String,
         required: true
@@ -12,4 +14,4 @@ const skillsSchema= new Schema({
     }
 
 });
-export const SkillsModel = model('skill', skillsSchema, 'recipes');
+export const SkillsModel = mongoose.model('skill', skillsSchema, 'recipes');

@@ -2,7 +2,7 @@
   "name": "ruby-portfolio-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
     "openapi": "nodemon src/openapi.js",
@@ -18,7 +18,7 @@
     "express": "^4.19.1",
     "express-oas-generator": "^1.0.46",
     "mongodb": "^6.5.0",
-    "mongoose": "^8.2.3",
+    "mongoose": "^6.4.6",
     "mongoose-to-swagger": "^1.5.1"
   },
   "devDependencies": {
