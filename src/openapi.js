@@ -3,11 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import { handleRequests, init, handleResponses } from "express-oas-generator";
-import AchievementRoutes from './routes/routes.achievement.js';
-import ProjectRoutes from './routes/routes.project.js';
-import ExperienceRoutes from './routes/routes.experience.js';
-import BlogRoutes from './routes/routes.blog.js';
-import SkillsRoutes from './routes/routes.skills.js';
+import { router } from "./routes/allroutes.js";
 
 
 
@@ -49,10 +45,7 @@ app.listen(8080, () => {
   );
 });
 
-app.use(AchievementRoutes)
-app.use(ProjectRoutes)
-app.use(ExperienceRoutes)
-app.use(BlogRoutes)
-app.use(SkillsRoutes)
+app.use(router)
+
 
 handleRequests()

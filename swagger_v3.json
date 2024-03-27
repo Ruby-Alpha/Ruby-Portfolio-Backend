@@ -1,0 +1,215 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/": {
+      "post": {
+        "summary": "/",
+        "responses": {},
+        "tags": []
+      },
+      "get": {
+        "summary": "/",
+        "responses": {},
+        "tags": []
+      },
+      "patch": {
+        "summary": "/",
+        "responses": {},
+        "tags": []
+      },
+      "delete": {
+        "summary": "/",
+        "responses": {},
+        "tags": []
+      }
+    },
+    "/{id}": {
+      "delete": {
+        "summary": "/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": []
+      },
+      "get": {
+        "summary": "/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "304": {
+            "description": ""
+          }
+        },
+        "tags": []
+      }
+    },
+    "/skills": {
+      "post": {
+        "summary": "/skills",
+        "responses": {},
+        "tags": []
+      },
+      "get": {
+        "summary": "/skills",
+        "responses": {},
+        "tags": []
+      }
+    },
+    "/skills/{id}": {
+      "get": {
+        "summary": "/skills/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": []
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "users"
+    }
+  ],
+  "info": {
+    "title": "Portfolio API Documentation",
+    "description": "API Documentation for Portfolio website",
+    "version": ""
+  },
+  "servers": [
+    {
+      "url": "http://localhost:7060"
+    },
+    {
+      "url": "https://localhost:7060"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "Achievement": {
+        "title": "Achievement",
+        "required": [
+          "name",
+          "description"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "_id": {
+            "type": "string"
+          }
+        }
+      },
+      "Project": {
+        "title": "Project",
+        "required": [
+          "title",
+          "description"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "_id": {
+            "type": "string"
+          }
+        }
+      },
+      "Experience": {
+        "title": "Experience",
+        "required": [
+          "name",
+          "description"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "_id": {
+            "type": "string"
+          }
+        }
+      },
+      "Blog": {
+        "title": "Blog",
+        "required": [
+          "name",
+          "description"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "_id": {
+            "type": "string"
+          }
+        }
+      },
+      "skill": {
+        "title": "skill",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "proficiencyLevel": {
+            "type": "string"
+          },
+          "_id": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

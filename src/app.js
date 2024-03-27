@@ -1,11 +1,8 @@
 import  express from 'express';
 import dotenv from'dotenv';
 import cors from 'cors';
-import AchievementRoutes from './routes/routes.achievement.js';
-import ProjectRoutes from './routes/routes.project.js';
-import ExperienceRoutes from './routes/routes.experience.js';
-import BlogRoutes from './routes/routes.blog.js';
-import SkillsRoutes from './routes/routes.skills.js';
+import { router } from './routes/allroutes.js';
+
 import mongoose from 'mongoose';
 import { handleRequests, init, handleResponses } from "express-oas-generator";
 
@@ -24,11 +21,7 @@ app.use(express.urlencoded({extended:false}))
 app.use(cors())
 
 
-app.use(AchievementRoutes)
-app.use(ProjectRoutes)
-app.use(ExperienceRoutes)
-app.use(BlogRoutes)
-app.use(SkillsRoutes)
+app.use(router)
 
 
 const PORT = process.env.PORT;
@@ -41,7 +34,7 @@ await mongoose.connect(process.env.MONGO_URI).then(() => {
 
 
 app.listen(PORT,  () => {
-    console.log(`express app is running ${PORT}`)
+    
     init(
         app,
         (spec) => {
@@ -63,15 +56,8 @@ app.listen(PORT,  () => {
         true
       );
     
-      console.log(
-        'Server Listening on  8080'
-      );
+      console.log(`express app is running ${PORT}`)
     });
     
-    app.use(AchievementRoutes)
-    app.use(ProjectRoutes)
-    app.use(ExperienceRoutes)
-    app.use(BlogRoutes)
-    app.use(SkillsRoutes)
-    
+   
     handleRequests()
