@@ -1,11 +1,11 @@
 import  express from 'express';
 import dotenv from'dotenv';
 import cors from 'cors';
-import AchievementRoutes from '../routes/routes.achievement.js';
-import ProjectRoutes from '../routes/routes.project.js';
-import ExperienceRoutes from '../routes/routes.experience.js';
-import BlogRoutes from '../routes/routes.blog.js';
-import SkillsRoutes from '../routes/routes.skills.js';
+import AchievementRoutes from './routes/routes.achievement.js';
+import ProjectRoutes from './routes/routes.project.js';
+import ExperienceRoutes from './routes/routes.experience.js';
+import BlogRoutes from './routes/routes.blog.js';
+import SkillsRoutes from './routes/routes.skills.js';
 import mongoose from 'mongoose';
 import { handleRequests, init, handleResponses } from "express-oas-generator";
 
@@ -42,9 +42,6 @@ await mongoose.connect(process.env.MONGO_URI).then(() => {
 
 app.listen(PORT,  () => {
     console.log(`express app is running ${PORT}`)
-
-    
-
     init(
         app,
         (spec) => {
@@ -67,7 +64,7 @@ app.listen(PORT,  () => {
       );
     
       console.log(
-        'Server Listening on  8080, Open http://localhost:8080/api-docs/'
+        'Server Listening on  8080'
       );
     });
     
