@@ -51,7 +51,7 @@ app.listen(PORT,  () => {
         60 * 1000,
         "api-docs",
         modelNames,
-        ["users"],
+        ["skills", "projects", "achievements", "blogs", "experience" ],
         ["development"],
         true
       );

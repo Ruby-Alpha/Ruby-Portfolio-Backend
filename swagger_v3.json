@@ -1,74 +1,20 @@
 {
   "openapi": "3.0.0",
   "paths": {
-    "/": {
-      "post": {
-        "summary": "/",
-        "responses": {},
-        "tags": []
-      },
-      "get": {
-        "summary": "/",
-        "responses": {},
-        "tags": []
-      },
-      "patch": {
-        "summary": "/",
-        "responses": {},
-        "tags": []
-      },
-      "delete": {
-        "summary": "/",
-        "responses": {},
-        "tags": []
-      }
-    },
-    "/{id}": {
-      "delete": {
-        "summary": "/{id}",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {},
-        "tags": []
-      },
-      "get": {
-        "summary": "/{id}",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "304": {
-            "description": ""
-          }
-        },
-        "tags": []
-      }
-    },
     "/skills": {
       "post": {
         "summary": "/skills",
         "responses": {},
-        "tags": []
+        "tags": [
+          "skills"
+        ]
       },
       "get": {
         "summary": "/skills",
         "responses": {},
-        "tags": []
+        "tags": [
+          "skills"
+        ]
       }
     },
     "/skills/{id}": {
@@ -85,13 +31,330 @@
           }
         ],
         "responses": {},
-        "tags": []
+        "tags": [
+          "skills"
+        ]
+      }
+    },
+    "/blogs": {
+      "post": {
+        "summary": "/blogs",
+        "responses": {},
+        "tags": [
+          "blogs"
+        ]
+      },
+      "get": {
+        "summary": "/blogs",
+        "responses": {},
+        "tags": [
+          "blogs"
+        ]
+      },
+      "patch": {
+        "summary": "/blogs",
+        "responses": {},
+        "tags": [
+          "blogs"
+        ]
+      },
+      "delete": {
+        "summary": "/blogs",
+        "responses": {},
+        "tags": [
+          "blogs"
+        ]
+      }
+    },
+    "/blogs/{id}": {
+      "get": {
+        "summary": "/blogs/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "blogs"
+        ]
+      },
+      "delete": {
+        "summary": "/blogs/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "blogs"
+        ]
+      }
+    },
+    "/achievements": {
+      "post": {
+        "summary": "/achievements",
+        "responses": {},
+        "tags": [
+          "achievements"
+        ]
+      },
+      "get": {
+        "summary": "/achievements",
+        "responses": {},
+        "tags": [
+          "achievements"
+        ]
+      },
+      "patch": {
+        "summary": "/achievements",
+        "responses": {},
+        "tags": [
+          "achievements"
+        ]
+      },
+      "delete": {
+        "summary": "/achievements",
+        "responses": {},
+        "tags": [
+          "achievements"
+        ]
+      }
+    },
+    "/achievements/{id}": {
+      "get": {
+        "summary": "/achievements/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "achievements"
+        ]
+      },
+      "delete": {
+        "summary": "/achievements/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "achievements"
+        ]
+      }
+    },
+    "/experience": {
+      "post": {
+        "summary": "/experience",
+        "responses": {},
+        "tags": [
+          "experience"
+        ]
+      },
+      "get": {
+        "summary": "/experience",
+        "responses": {},
+        "tags": [
+          "experience"
+        ]
+      },
+      "patch": {
+        "summary": "/experience",
+        "responses": {},
+        "tags": [
+          "experience"
+        ]
+      },
+      "delete": {
+        "summary": "/experience",
+        "responses": {},
+        "tags": [
+          "experience"
+        ]
+      }
+    },
+    "/experience/{id}": {
+      "get": {
+        "summary": "/experience/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "experience"
+        ]
+      },
+      "delete": {
+        "summary": "/experience/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "experience"
+        ]
+      }
+    },
+    "/projects": {
+      "post": {
+        "summary": "/projects",
+        "responses": {},
+        "tags": [
+          "projects"
+        ]
+      },
+      "get": {
+        "summary": "/projects",
+        "responses": {},
+        "tags": [
+          "projects"
+        ]
+      },
+      "delete": {
+        "summary": "/projects",
+        "responses": {},
+        "tags": [
+          "projects"
+        ]
+      }
+    },
+    "/projects/{id}": {
+      "get": {
+        "summary": "/projects/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "projects"
+        ]
+      },
+      "patch": {
+        "summary": "/projects/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "string",
+                      "example": "660476a3951946c615e7bccd"
+                    },
+                    "title": {
+                      "type": "string",
+                      "example": "My first website"
+                    },
+                    "description": {
+                      "type": "string",
+                      "example": "WWonderful experience"
+                    },
+                    "__v": {
+                      "type": "number",
+                      "example": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "projects"
+        ]
+      },
+      "delete": {
+        "summary": "/projects/{id}",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {},
+        "tags": [
+          "projects"
+        ]
       }
     }
   },
   "tags": [
     {
-      "name": "users"
+      "name": "skills"
+    },
+    {
+      "name": "projects"
+    },
+    {
+      "name": "achievements"
+    },
+    {
+      "name": "blogs"
+    },
+    {
+      "name": "experience"
     }
   ],
   "info": {
@@ -101,16 +364,16 @@
   },
   "servers": [
     {
-      "url": "http://localhost:7060"
+      "url": "http://ruby-portfolio-backend.onrender.com"
     },
     {
-      "url": "https://localhost:7060"
+      "url": "https://ruby-portfolio-backend.onrender.com"
     }
   ],
   "components": {
     "schemas": {
-      "Achievement": {
-        "title": "Achievement",
+      "Blog": {
+        "title": "Blog",
         "required": [
           "name",
           "description"
@@ -130,14 +393,31 @@
           }
         }
       },
-      "Project": {
-        "title": "Project",
+      "skill": {
+        "title": "skill",
         "required": [
-          "title",
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "proficiencyLevel": {
+            "type": "string"
+          },
+          "_id": {
+            "type": "string"
+          }
+        }
+      },
+      "Achievement": {
+        "title": "Achievement",
+        "required": [
+          "name",
           "description"
         ],
         "properties": {
-          "title": {
+          "name": {
             "type": "string"
           },
           "description": {
@@ -172,37 +452,20 @@
           }
         }
       },
-      "Blog": {
-        "title": "Blog",
+      "Project": {
+        "title": "Project",
         "required": [
-          "name",
+          "title",
           "description"
         ],
         "properties": {
-          "name": {
+          "title": {
             "type": "string"
           },
           "description": {
             "type": "string"
           },
           "image": {
-            "type": "string"
-          },
-          "_id": {
-            "type": "string"
-          }
-        }
-      },
-      "skill": {
-        "title": "skill",
-        "required": [
-          "name"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "proficiencyLevel": {
             "type": "string"
           },
           "_id": {

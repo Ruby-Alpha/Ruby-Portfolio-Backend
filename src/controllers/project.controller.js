@@ -32,8 +32,8 @@ export const addProject = async(req, res, next) => {
 
  export const updateProjects = async(req, res, next) => {
     try {
-        const updateProjects = await ProjectModel.updateMany(req.body);
-        res.json(updateMany)
+        const updateProjects = await ProjectModel.findByIdAndUpdate(req.params.id, req.body);
+        res.json(updateProjects)
     } catch (error) {
         
     }

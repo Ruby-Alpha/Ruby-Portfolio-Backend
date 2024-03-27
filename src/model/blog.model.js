@@ -12,8 +12,7 @@ const blogSchema = new schema({
         required: true
     },
     image: {
-        type: String,
-        required: false
+        type: String
     },
 
 });
