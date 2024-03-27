@@ -1,11 +1,11 @@
 import  express from 'express';
 import dotenv from'dotenv';
 import cors from 'cors';
-import AchievementRoutes from '../routes/routes.achievement.js';
-import ProjectRoutes from '../routes/routes.project.js';
-import ExperienceRoutes from '../routes/routes.experience.js';
-import BlogRoutes from '../routes/routes.blog.js';
-import SkillsRoutes from '../routes/routes.skills.js';
+import AchievementRoutes from './routes/routes.achievement.js';
+import ProjectRoutes from './routes/routes.project.js';
+import ExperienceRoutes from './routes/routes.experience.js';
+import BlogRoutes from './routes/routes.blog.js';
+import SkillsRoutes from './routes/routes.skills.js';
 import mongoose from 'mongoose';
 
 dotenv.config()
