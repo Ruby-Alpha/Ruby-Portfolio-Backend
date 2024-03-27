@@ -42,7 +42,7 @@ app.listen(PORT,  () => {
             title: "Portfolio API Documentation",
             description: "API Documentation for Portfolio website",
           };
-          spec.host = "localhost:7060";
+          spec.host = "ruby-portfolio-backend.onrender.com";
           spec.schemes = ["http", "https"];
     
           return spec;
