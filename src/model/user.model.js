@@ -17,7 +17,7 @@ const userSchema = new schema({
     },
     passsword:{
         type:Number,
-        required: true
+        required: false
     }
 
 })
